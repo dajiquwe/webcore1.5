@@ -71,7 +71,7 @@ window.addEventListener('resize', (e) => {
   if (width <= 320) {
     document.querySelector('.swiper-pagination').style.display = 'block';
   }
-  if (width > 320) {
+  if (width > 767) {
     document.querySelector('.swiper-pagination').style.display = 'none';
   }
 });

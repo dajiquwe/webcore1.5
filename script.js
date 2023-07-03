@@ -20,7 +20,6 @@ addEventListener('load', function () {
 
 let a = 3;
 let down = document.getElementById('down');
-let label = document.getElementById('text');
 
 function showAll (){
   let width = document.body.clientWidth;
@@ -31,7 +30,8 @@ function showAll (){
     document.querySelector('.swiper-slide:nth-child(9)').style.display = 'block';
     document.querySelector('.swiper-slide:nth-child(10)').style.display = 'block';
     document.querySelector('.swiper-slide:nth-child(11)').style.display = 'block';
-    label.innerHTML = 'Скрыть все';
+    down.style.backgroundImage = "url(down.svg)";
+    down.innerHTML = 'Скрыть все';
   }
   else if ((a % 2 == 0) && (width < 1120)) {
     document.querySelector('.swiper-slide:nth-child(7)').style.display = 'none';
@@ -39,19 +39,19 @@ function showAll (){
     document.querySelector('.swiper-slide:nth-child(9)').style.display = 'none';
     document.querySelector('.swiper-slide:nth-child(10)').style.display = 'none';
     document.querySelector('.swiper-slide:nth-child(11)').style.display = 'none';
-    label.innerHTML = 'Показать все';
+    down.innerHTML = 'Показать все';
   }
   else if ((a % 2 == 1) && (width >= 1120)) {
     document.querySelector('.swiper-slide:nth-child(9)').style.display = 'block';
     document.querySelector('.swiper-slide:nth-child(10)').style.display = 'block';
     document.querySelector('.swiper-slide:nth-child(11)').style.display = 'block';
-    label.innerHTML = 'Скрыть все';
+    down.innerHTML = 'Скрыть все';
   }
   else if ((a % 2 == 0) && (width >= 1120)) {
     document.querySelector('.swiper-slide:nth-child(9)').style.display = 'none';
     document.querySelector('.swiper-slide:nth-child(10)').style.display = 'none';
     document.querySelector('.swiper-slide:nth-child(11)').style.display = 'none';
-    label.innerHTML = 'Показать все';
+    down.innerHTML = 'Показать все';
   }
   a++;
 }

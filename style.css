@@ -16,11 +16,11 @@ body {
 }
 
 .companies { 
+    min-width: 320px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
     background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
-    width: 320px;
     border: 1px solid #F8F8F8;
     border-top: 1px solid #41F6D7;
     border-bottom: 1px solid #F8F8F8;
@@ -34,7 +34,7 @@ body {
 }
 
 .swiper {
-    width: 320px;
+    min-width: 320px;
     background-color: #F8F8F8;
     border-top: 1px solid black;
 }
@@ -55,8 +55,10 @@ body {
     background: white;
     width: 225px;
     height: 72px;
-    border: 1px solid black;
+    border: 1px solid linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    border-radius: 5px;
     margin-right: 16px;
+    margin-bottom: 5px;
 }
 
 .brands {
@@ -79,7 +81,16 @@ body {
     text-align: center;
     color: #FF3E79;
     vertical-align: middle;
-    font-size: 25px;
+    font-size: 22px;
+    transform: rotate(-40deg);
+}
+
+.brands__arrow::after {
+    content: 'aq';
+    color: white;
+    border-right: 2px solid #FF3E79;
+    border-bottom: 2px solid #FF3E79;
+    font-size: 6px;
 }
 
 .swiper-pagination {
@@ -89,13 +100,19 @@ body {
 .companies__button {
     display: none;
     margin-bottom: 20px;
-    
+    background: white;
+    background-image: url(down.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    height: 22px;
+    font-size: 22px;
+    padding-left: 30px;
 }
 
-.companies__button button {
-    background: white;
-    border: 1px solid white;
-    height: 16px;
+.companies__button img {
+    width: 22px;
+    height: 20px;
 }
 
 @media (min-width: 768px) {
@@ -104,11 +121,11 @@ body {
     }
 
     .companies {
-        width: 768px;
+        min-width: 768px;
     }
 
     .swiper {
-        width: 768px;
+        min-width: 768px;
     }
 
     .swiper-wrapper {
